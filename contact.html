@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Ideal Photography</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">Ideal Photography</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>Get in touch with our team</p>
+            </div>
+        </section>
+
+        <section class="form-content">
+            <div class="container">
+                <div class="form-container">
+                    <h2>Send Us a Message</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="contactName">Full Name *</label>
+                            <input type="text" id="contactName" name="contactName" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactEmail">Email Address *</label>
+                            <input type="email" id="contactEmail" name="contactEmail" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactPhone">Phone Number</label>
+                            <input type="tel" id="contactPhone" name="contactPhone" class="form-control">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="messageType">Type of Message *</label>
+                            <select id="messageType" name="messageType" class="form-control" required>
+                                <option value="">Select message type</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="booking">Booking Request</option>
+                                <option value="support">Customer Support</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactMessage">Message *</label>
+                            <textarea id="contactMessage" name="contactMessage" class="form-control" required placeholder="Please type your message here..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                
+                <div class="side-info">
+                    <h3>Contact Information</h3>
+                    <div class="info-item">
+                        <h4>Phone</h4>
+                        <p>+27 12 345 6789</p>
+                        <p>Mon-Fri: 8:00 AM - 6:00 PM</p>
+                        <p>Sat: 9:00 AM - 2:00 PM</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Email</h4>
+                        <p>info@idealphotography.co.za</p>
+                        <p>bookings@idealphotography.co.za</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Studio Location</h4>
+                        <p>123 Photo Street</p>
+                        <p>Pretoria Central</p>
+                        <p>Pretoria, 0001</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Additional Location</h4>
+                        <p>45 Creative Avenue</p>
+                        <p>Hazelwood</p>
+                        <p>Pretoria, 0081</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Business Hours</h4>
+                        <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                        <p>Saturday: 9:00 AM - 2:00 PM</p>
+                        <p>Sunday: Closed</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-media">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#">FB</a>
+                        <a href="#">IG</a>
+                        <a href="#">TW</a>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Info</h3>
+                    <p>Email: info@idealphotography.co.za</p>
+                    <p>Phone: +27 12 345 6789</p>
+                    <p>Address: 123 Photo Street, Pretoria</p>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2025 Ideal Photography | Designed by Kelebogile F.L</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
