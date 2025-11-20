@@ -3,7 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Ideal Photography</title>
+    <title>About Us - Ideal Photography | Meet Our Professional Team</title>
+    <meta name="description" content="Learn about Ideal Photography's story, mission, and meet our professional photography team in Pretoria. Experienced wedding, portrait, and commercial photographers.">
+    <meta name="keywords" content="about ideal photography, photography team, professional photographers, Pretoria photography studio">
+    <meta name="author" content="Kelebogile Lebese">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="About Ideal Photography - Our Story & Team">
+    <meta property="og:description" content="Meet the professional team behind Ideal Photography and learn about our mission to capture perfect moments.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://idealphotography.co.za/about.html">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://idealphotography.co.za/about.html">
+    
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
@@ -28,10 +42,15 @@
 
     <!-- Main Content -->
     <main>
-        <section class="page-header">
-            <div class="container">
-                <h1>About Us</h1>
+        <!-- Hero Section -->
+        <section class="hero" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero-bg.jpg'); background-size: cover; background-position: center;">
+            <div class="hero-content">
+                <h2>About Us</h2>
                 <p>Get to know the team behind the lens</p>
+                <div class="cta-buttons">
+                    <a href="portfolio.html" class="btn btn-primary">View Portfolio</a>
+                    <a href="contact.html" class="btn btn-secondary">Book a Session</a>
+                </div>
             </div>
         </section>
 
@@ -57,19 +76,25 @@
                     <h2>Meet Our Team</h2>
                     <div class="team-grid">
                         <div class="team-member">
-                            <div class="member-photo"></div>
+                            <div class="member-photo">
+                                <img src="images/Kelebogile.jpg" alt="Kelebogile Frank L. - Lead Photographer & Founder" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+                            </div>
                             <h3>Kelebogile Frank L.</h3>
                             <p class="role">Lead Photographer & Founder</p>
                             <p class="bio">With over 5 years of experience, Kelebogile specializes in wedding and portrait photography, capturing emotions and moments that tell a story. His artistic vision and technical expertise ensure every shot is perfect.</p>
                         </div>
                         <div class="team-member">
-                            <div class="member-photo"></div>
+                            <div class="member-photo">
+                                <img src="images/Sarah.jpg" alt="Sarah Johnson - Portrait Specialist" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+                            </div>
                             <h3>Sarah Johnson</h3>
                             <p class="role">Portrait Specialist</p>
                             <p class="bio">Sarah has a talent for making her subjects feel comfortable in front of the camera, resulting in natural and authentic portraits. She specializes in family, newborn, and graduation photography.</p>
                         </div>
                         <div class="team-member">
-                            <div class="member-photo"></div>
+                            <div class="member-photo">
+                                <img src="images/Michael.jpg" alt="Michael Brown - Commercial Photographer" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+                            </div>
                             <h3>Michael Brown</h3>
                             <p class="role">Commercial Photographer</p>
                             <p class="bio">Michael brings a creative eye to corporate and commercial projects, helping businesses tell their brand stories through imagery. His work includes product photography, corporate events, and brand campaigns.</p>
@@ -87,9 +112,9 @@
                 <div class="social-media">
                     <h3>Follow Us</h3>
                     <div class="social-icons">
-                        <a href="#">FB</a>
-                        <a href="#">IG</a>
-                        <a href="#">TW</a>
+                        <a href="#" aria-label="Facebook">FB</a>
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="Twitter">TW</a>
                     </div>
                 </div>
                 <div class="contact-info">
@@ -102,5 +127,7 @@
             <p class="copyright">&copy; 2025 Ideal Photography | Designed by Kelebogile F.L</p>
         </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
