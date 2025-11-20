@@ -78,6 +78,7 @@ header .container {
     color: var(--secondary-color);
     text-decoration: none;
     font-family: var(--font-heading);
+    align-content: center;
 }
 
 nav ul {
@@ -306,11 +307,13 @@ nav a:hover::after {
 .about-content {
     padding: 5rem 0;
     background-color: var(--white);
+    align-items: center;
 }
 
 .about-text h2 {
     margin-top: 2rem;
     color: var(--primary-color);
+    align-items: center;
 }
 
 .about-text h2:first-child {
@@ -676,8 +679,7 @@ footer {
     margin-bottom: 2rem;
 }
 
-.social-media h3,
-.contact-info h3 {
+.social-media h3, .contact-info h3 {
     margin-bottom: 1rem;
     color: var(--white);
 }
@@ -733,14 +735,11 @@ footer {
         font-size: 2.5rem;
     }
     
-    .gallery-grid,
-    .team-grid,
-    .services-grid {
+    .gallery-grid, .team-grid, .services-grid {
         grid-template-columns: repeat(2, 1fr);
     }
     
-    .footer-content,
-    .form-content {
+    .footer-content, .form-content {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
@@ -792,21 +791,11 @@ footer {
         font-size: 2rem;
     }
     
-    .gallery-grid,
-    .team-grid,
-    .services-grid,
-    .portfolio-grid {
+    .gallery-grid, .team-grid, .services-grid, .portfolio-grid {
         grid-template-columns: 1fr;
     }
     
-    .intro,
-    .galleries,
-    .testimonials-preview,
-    .about-content,
-    .services-content,
-    .portfolio-content,
-    .testimonials-content,
-    .form-content {
+    .intro, .galleries, .testimonials-preview, .about-content, .services-content, .portfolio-content, .testimonials-content, .form-content {
         padding: 3rem 0;
     }
     
@@ -825,5 +814,140 @@ footer {
     
     .form-container, .side-info {
         padding: 1.5rem;
+    }
+}
+
+/* Part 3 Enhancements */
+
+/* Form Validation Styles */
+.error-message {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+.form-control.error {
+    border-color: #e74c3c;
+    box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.1);
+}
+
+.form-control.valid {
+    border-color: #27ae60;
+}
+
+/* Loading Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Gallery Lightbox Enhancement */
+.portfolio-item {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Success Messages */
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+    border: 1px solid #c3e6cb;
+    display: none;
+}
+
+.success-message.show {
+    display: block;
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Mobile Menu Enhancements */
+.mobile-menu-btn {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+    
+    nav.mobile-open ul {
+        display: flex;
+    }
+    
+    nav li {
+        margin: 0;
+        border-bottom: 1px solid var(--medium-gray);
+    }
+    
+    nav a {
+        display: block;
+        padding: 1rem;
+    }
+}
+
+/* SEO Optimization - Print Styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+        color: #000;
+        background: #fff;
+    }
+    
+    .hero, .testimonials-preview {
+        break-inside: avoid;
+    }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus styles for keyboard navigation */
+a:focus, button:focus, input:focus, select:focus, textarea:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-color: #0000FF;
+        --secondary-color: #000000;
+        --text-color: #000000;
     }
 }
