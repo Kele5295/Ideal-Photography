@@ -3,7 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enquiry - Ideal Photography</title>
+    <title>Service Enquiry - Ideal Photography | Get Quote & Information</title>
+    <meta name="description" content="Submit a service enquiry to Ideal Photography. Get detailed information about our wedding, portrait, and commercial photography packages and pricing.">
+    <meta name="keywords" content="photography enquiry, service quote, wedding photography inquiry, portrait session booking">
+    <meta name="author" content="Kelebogile Lebese">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Ideal Photography Service Enquiry">
+    <meta property="og:description" content="Get detailed information and quotes for our professional photography services.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://idealphotography.co.za/enquiry.html">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://idealphotography.co.za/enquiry.html">
+    
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
@@ -111,6 +125,7 @@
                         
                         <button type="submit" class="btn btn-primary">Submit Enquiry</button>
                     </form>
+                    <div id="enquirySuccess" class="success-message"></div>
                 </div>
                 
                 <div class="side-info">
@@ -143,9 +158,9 @@
                 <div class="social-media">
                     <h3>Follow Us</h3>
                     <div class="social-icons">
-                        <a href="#">FB</a>
-                        <a href="#">IG</a>
-                        <a href="#">TW</a>
+                        <a href="#" aria-label="Facebook">FB</a>
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="Twitter">TW</a>
                     </div>
                 </div>
                 <div class="contact-info">
@@ -159,12 +174,6 @@
         </div>
     </footer>
 
-    <script>
-        document.getElementById('enquiryForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your enquiry! We will get back to you within 24 hours.');
-            this.reset();
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
